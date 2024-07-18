@@ -6,9 +6,9 @@ app = Flask(__name__)
 def madlib_completed():
     return render_template('madlib.html')
 
-@app.route('/completed', methods=['POST'])
+@app.route('/completed', methods=['GET','POST'])
 def fill_in_black():
-    noun = request.form['noun']
+    noun = request .form['noun']
     verb = request.form['verb']
     adverb = request.form['adverb']
     adjective = request.form['adjective']
